@@ -1,0 +1,4 @@
+ToDoList,Desenvolver uma ToDoList em Grovy,5,04/03/2022,Grovy,A Fazer
+ToDoList,Desenvolver uma ToDoList em Java,3,02/03/2022,JAVA,Fazendo
+Estudar Calculo, Estudar calculo 2 pela lista do professor,2,07/03/2022,UECE,A Fazer
+GEMP, Reunião com o GEMP,3,05/03/2022,UECE, A Fazer
