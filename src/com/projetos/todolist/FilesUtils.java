@@ -3,7 +3,7 @@ package com.projetos.todolist;
 import java.io.*;
 import java.util.*;
 
-public class FilesUtils {
+public class FilesUtils implements IFilesUtils{
 
     String filePath = null;
 
@@ -22,7 +22,6 @@ public class FilesUtils {
                 taf.add(temp);
             }
         }
-        //System.out.println(taf);
     }
 
     public void exportData(ArrayList<Tasks> t){
@@ -38,10 +37,7 @@ public class FilesUtils {
         for(Tasks a : t){
             printWriter.println(a);
         }
-
         printWriter.close ();
-
-
     }
 
     //FUNÇÃO EM DESENVOLVIMENTO :

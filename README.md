@@ -3,9 +3,34 @@
 # Próximos Updates:
 
 - Opção de desfazer alterações.
+- Data (tipo)
 - Editar Tarefas.
 - Entradas Inválidas não são permitidas em toda a execução do código.
 
+# Versão 1.0.1-alpha
+
+**-Organização de classes.**
+
+**-Implementação de testes unitários em funções de inserir, excluir e exportar dados.**
+
+**-Refatorei o código e desacoplei funções (Ficou melhor de entender 🙂).**
+
+**-Correção de Bugs 😵:**
+
+*Se você inserisse uma prioridade menor que um e maior que cinco, o programa rodava normalmente, contudo, não era pra rodar...*
+
+## Testes Unitários:
+
+![UnitTestImage](Images/UnitTestImage.png)
+
+- Testes de Criação da lista de tasks.
+- Inserção de um elemento na lista.
+- Remoção de um elemento na lista
+- Atualizando o banco de dados da lista.
+
+Nestes testes usei de dependências o JUnit e o Mockito.
+
+Por conta dos testes, tive que refatorar as funções e organizar melhor o código. Assim, consegui implementar os testes com mais eficiência.
 # Versão 1.0.0-alpha
 
 **-Implementação da Aplicação.**
