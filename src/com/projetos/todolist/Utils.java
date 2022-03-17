@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class Utils {
+public class Utils{
     public static int printarMenu(){
         System.out.println("");
         System.out.println("O que deseja fazer ?");
@@ -69,8 +69,8 @@ public class Utils {
         String r6 = input.nextLine();
         noInput(r6);
         int n = Integer.parseInt(r3);
-        Tasks t = new Tasks(r1,r2,n,r4,r5,r6);
-        tarefas.add(t);
+        Tasks inserted = new Tasks(r1,r2,n,r4,r5,r6);
+        tarefas.add(inserted);
         ordenaLista(tarefas);
         //System.out.println(tarefas);
     }
@@ -81,6 +81,7 @@ public class Utils {
         Scanner input = new Scanner(System.in);
         int r = input.nextInt();
         r--;
+        Tasks removed = tarefas.get(r);
         tarefas.remove(r);
     }
     public static void noInput(String r){
