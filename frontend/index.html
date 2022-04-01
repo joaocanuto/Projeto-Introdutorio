@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+  </head>
+  <body>
+
+    <div class="titleApp">
+      <h1 class="titulo">To Do List</h1>
+  </div>
+
+    <div class="to_do_list">
+      <div class="view_task">
+        <div class="addTaskToList">
+          <h2 class="title_add">Adicionar uma Atividade</h2>
+          <hr></hr>
+            <input class="data_Task" type="text" id="nameTask" placeholder="Titulo...">
+            <input class="data_Task" type="text" id="descriptionTask" placeholder="Descrição...">
+            <select class="data_Task" id="priorityTask" placeholder="Prioridade...">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <input class="data_Task" type="date" id="dateEndTask">
+            <input class="data_Task" type="text" id="categoryTask" placeholder="Categoria...">
+            <select class="data_Task" id="sttTask" placeholder="Status...">
+              <option value="todo">ToDo</option>
+              <option value="doing">Doing</option>
+              <option value="done">Done</option>
+          </select>
+          <hr></hr>
+          <button id="addBtn">Add</button>
+      </div>
+      <div class="menu">
+        <h2 class="titleList"> Lista de Atividades</h2>
+        <hr></hr>
+        <div class="taskHeader">
+          <p>Nome</p>
+          <p>Descrição</p>
+          <p>Prioridade</p>
+          <p>Data de Termino</p>
+          <p>Categoria</p>
+          <p>Status</p>
+          <p>Hide</p>
+        </div>
+        <div class = "listTask">
+
+        </div>
+        <button type="button" id="clear-list">Clear Items</button>
+      </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="application.js"></script>
+  </body>
+</html>
