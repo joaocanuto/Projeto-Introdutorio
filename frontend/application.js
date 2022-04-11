@@ -27,28 +27,51 @@ const statusTask = document.querySelector("#sttTask");
 const listTaskHtml = document.querySelector(".listTask");
 const listTasks = [];
 
+console.log(botaoAdd)
 botaoAdd.addEventListener('click', () => addTask());
 botaoRemove.addEventListener('click', () => removeAllTasks());
 
 alert(" Hiding a Task doesn´t remove it from your list, only just hide from your painel!");
 
+function verificaData(dataLida){
+  let today = new Date();
+  let nums = dataLida.split("-");
+  console.log(dataLida);
+  console.log(nums);
+  let dateEnding = new Date(Number(nums[0]),Number(nums[1])-1,Number(nums[2]))
+  console.log(dateEnding - today);
+  if(dateEnding - today < 0){
+      return false; 
+  } else {
+    return true;
+  }
+}
+
 function buildTask(){
+    if(!verificaData(dateEndTask.value)){
+      alert("Insira uma data válida!")
+      return false;
+    }
     let newTask = new Task(nameTask.value, descriptionTask.value,Number(priorityTask.value),dateEndTask.value,categoryTask.value, statusTask.value);
     let x = new Date();
     return newTask;
 }
 
 function addTask(){
-    const task = buildTask();
+  const task = buildTask();
+  if(task){
     listTasks.push(task);
     //showTasks();
-  let saida ="";
-  listTasks.forEach((t) =>{
-    saida +=`<div class="task"><p >${t.name}</p><p>${t.description}</p><p >${t.priority}</p><p >${t.dateEnd}</p><p >${t.category}</p><p >${t.status}</p> </div>`;
-  });
-  listTaskHtml.innerHTML = saida;
-  bttDeleteTask();
-  bttCloseTask();
+    let saida ="";
+    listTasks.forEach((t) =>{
+      saida +=`<div class="task"><p >${t.name}</p><p>${t.description}</p><p >${t.priority}</p><p >${t.dateEnd}</p><p >${t.category}</p><p >${t.status}</p> </div>`;
+    });
+    listTaskHtml.innerHTML = saida;
+    bttDeleteTask();
+    bttCloseTask();
+  } else {
+    return;
+  }
 }
 
 //Add a button to delete Task:
