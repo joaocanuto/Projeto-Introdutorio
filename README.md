@@ -1,5 +1,13 @@
 # To-Do-List
 
+# O que é esse projeto ? 
+
+Trata-se do desenvolvimento de um To Do List, com Frontend e Backend, ainda sem integra-los, e sem banco de dados! 
+Para o frontend foi usado Javascript, Css, Html
+Para o Backend foi usada Java
+Foi implementando conhecimento de padrões de projeto e testes unitários nas atividades!
+
+
 # Próximos Updates:
 
 - Opção de desfazer alterações.
